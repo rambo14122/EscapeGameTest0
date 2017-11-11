@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>app.module.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+app.module.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ BrowserModule } from </span><span class="s2">'@angular/platform-browser'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ ErrorHandler, NgModule } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ IonicApp, IonicErrorHandler, IonicModule } from </span><span class="s2">'ionic-angular'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ SplashScreen } from </span><span class="s2">'@ionic-native/splash-screen'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ StatusBar } from </span><span class="s2">'@ionic-native/status-bar'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ MyApp } from </span><span class="s2">'./app.component'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ HomePage } from </span><span class="s2">'../pages/home/home'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ AngularFireModule } from </span><span class="s2">'angularfire2'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ AngularFireDatabaseModule } from </span><span class="s2">'angularfire2/database'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ AngularFireAuthModule } from </span><span class="s2">'angularfire2/auth'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ firebaseConfig } from </span><span class="s2">'../environment'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ ComponentsModule } from </span><span class="s2">&quot;../components/components.module&quot;</span><span class="s1">; 
+ 
+ 
+@NgModule({ 
+  declarations: [ 
+    MyApp, 
+    HomePage 
+  ], 
+  imports: [ 
+    BrowserModule, 
+    IonicModule.forRoot(MyApp), 
+    AngularFireModule.initializeApp(firebaseConfig), 
+    AngularFireDatabaseModule, 
+    AngularFireAuthModule, 
+    ComponentsModule 
+ 
+  ], 
+  bootstrap: [IonicApp], 
+  entryComponents: [ 
+    MyApp, 
+    HomePage 
+  ], 
+  providers: [ 
+    StatusBar, 
+    SplashScreen, 
+    {provide: ErrorHandler, useClass: IonicErrorHandler} 
+  ] 
+}) 
+</span><span class="s0">export class </span><span class="s1">AppModule {} 
+</span></pre>
+</body>
+</html>

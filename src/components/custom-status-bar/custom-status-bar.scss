@@ -1,0 +1,21 @@
+custom-status-bar {
+  .progressBarBackground
+  {
+
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top:5%;
+    float:left;
+    width: 100%;
+    padding:1px;
+    height: 14px;
+  }
+  .progressBar
+  {
+    width: 50%;
+    border-radius: 5px;
+    float:left;
+    height:10px;
+    background-color: green;
+  }
+}

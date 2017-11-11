@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>location-item.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+location-item.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{Component, Input} from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+ 
+</span><span class="s3">/** 
+ * Generated class for the LocationItemComponent component. 
+ * 
+ * See https://angular.io/api/core/Component for more info on Angular 
+ * Components. 
+ */</span><span class="s1"> 
+@Component({ 
+  selector: </span><span class="s2">'location-item'</span><span class="s1">, 
+  templateUrl: </span><span class="s2">'location-item.html'</span><span class="s1"> 
+}) 
+</span><span class="s0">export class </span><span class="s1">LocationItemComponent { 
+ 
+  @Input() gameStatusPortion:any; 
+  constructor() { 
+ 
+  } 
+  find_rational(value) { 
+    </span><span class="s0">var </span><span class="s1">best_numer = </span><span class="s4">1</span><span class="s1">; 
+    </span><span class="s0">var </span><span class="s1">best_denom = </span><span class="s4">1</span><span class="s1">; 
+    </span><span class="s0">var </span><span class="s1">best_err = Math.abs(value - best_numer / best_denom); 
+    </span><span class="s0">for </span><span class="s1">(</span><span class="s0">var </span><span class="s1">denom = </span><span class="s4">1</span><span class="s1">; best_err &gt; </span><span class="s4">0 </span><span class="s1">&amp;&amp; denom &lt;= </span><span class="s4">10000</span><span class="s1">; denom++) { 
+      </span><span class="s0">var </span><span class="s1">numer = Math.round(value * denom); 
+      </span><span class="s0">var </span><span class="s1">err = Math.abs(value - numer / denom); 
+      </span><span class="s0">if </span><span class="s1">(err &lt; best_err) { 
+        best_numer = numer; 
+        best_denom = denom; 
+        best_err = err; 
+      } 
+    } 
+    </span><span class="s0">var </span><span class="s1">result=best_numer+</span><span class="s2">&quot;/&quot;</span><span class="s1">+best_denom; 
+    </span><span class="s0">return </span><span class="s1">result; 
+  } 
+ 
+} 
+</span></pre>
+</body>
+</html>

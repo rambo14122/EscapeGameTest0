@@ -1,0 +1,21 @@
+custom-tabs {
+ ion-grid
+ {
+   position:fixed;
+   bottom:0;
+   left:0;
+   padding: 0px !important;
+   margin:0px !important;
+ }
+  ion-grid ion-col
+  {
+    padding: 0px !important;
+  }
+  ion-grid ion-col button
+  {
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 0 !important;
+    padding: 1px !important;
+  }
+}

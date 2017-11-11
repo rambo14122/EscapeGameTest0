@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>app.component.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+app.component.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ Component } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ Platform } from </span><span class="s2">'ionic-angular'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ StatusBar } from </span><span class="s2">'@ionic-native/status-bar'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ SplashScreen } from </span><span class="s2">'@ionic-native/splash-screen'</span><span class="s1">; 
+ 
+</span><span class="s0">import </span><span class="s1">{ HomePage } from </span><span class="s2">'../pages/home/home'</span><span class="s1">; 
+@Component({ 
+  templateUrl: </span><span class="s2">'app.html'</span><span class="s1"> 
+}) 
+</span><span class="s0">export class </span><span class="s1">MyApp { 
+  rootPage:any = HomePage; 
+ 
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) { 
+    platform.ready().then(() =&gt; { 
+      </span><span class="s3">// Okay, so the platform is ready and our plugins are available.</span><span class="s1"> 
+      </span><span class="s3">// Here you can do any higher level native things you might need.</span><span class="s1"> 
+      statusBar.styleDefault(); 
+      splashScreen.hide(); 
+    }); 
+  } 
+} 
+ 
+</span></pre>
+</body>
+</html>

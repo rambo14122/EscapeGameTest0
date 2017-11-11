@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>game-chat.module.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+game-chat.module.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ NgModule } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ IonicPageModule } from </span><span class="s2">'ionic-angular'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ GameChatPage } from </span><span class="s2">'./game-chat'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ComponentsModule} from </span><span class="s2">&quot;../../../components/components.module&quot;</span><span class="s1">; 
+ 
+@NgModule({ 
+  declarations: [ 
+    GameChatPage, 
+  ], 
+  imports: [ 
+    IonicPageModule.forChild(GameChatPage), 
+    ComponentsModule 
+  ], 
+}) 
+</span><span class="s0">export class </span><span class="s1">GameChatPageModule {} 
+</span></pre>
+</body>
+</html>

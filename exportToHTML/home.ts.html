@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>home.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+home.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ Component } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{NavController } from </span><span class="s2">'ionic-angular'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ AngularFireDatabase } from </span><span class="s2">'angularfire2/database'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ Observable } from </span><span class="s2">'rxjs/Observable'</span><span class="s1">; 
+ 
+@Component({ 
+  selector: </span><span class="s2">'page-home'</span><span class="s1">, 
+  templateUrl: </span><span class="s2">'home.html'</span><span class="s1"> 
+}) 
+</span><span class="s0">export class </span><span class="s1">HomePage { 
+  items: Observable&lt;any[]&gt;; 
+  constructor( </span><span class="s0">public </span><span class="s1">db: AngularFireDatabase,</span><span class="s0">public </span><span class="s1">navCtrl: NavController) { 
+    </span><span class="s0">this</span><span class="s1">.items = db.list(</span><span class="s2">'TestDB'</span><span class="s1">).valueChanges(); 
+  } 
+  registerNewUser() 
+  { 
+    </span><span class="s0">this</span><span class="s1">.navCtrl.push(</span><span class="s2">&quot;RegisterNewUserPage&quot;</span><span class="s1">); 
+  } 
+  visitorLogin() 
+  { 
+    </span><span class="s0">this</span><span class="s1">.navCtrl.push(</span><span class="s2">&quot;GameSelectionPage&quot;</span><span class="s1">); 
+  } 
+ 
+} 
+</span></pre>
+</body>
+</html>

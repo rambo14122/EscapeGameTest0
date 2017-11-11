@@ -1,0 +1,21 @@
+<!--
+  Generated template for the GroupSelectionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>GroupSelection</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button (click)="goToGamePage()" class="groupButton"><group-item [groupMemberNumberPortion]="0.6"></group-item></button>
+  <button class="groupButton"><group-item [groupMemberNumberPortion]="0.8"></group-item></button>
+  <button class="groupButton"><group-item [groupMemberNumberPortion]="1"></group-item></button>
+  <button class="createGroupButton" ion-button block color="danger">Create Group</button>
+</ion-content>

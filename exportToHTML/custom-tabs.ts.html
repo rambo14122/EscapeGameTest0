@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>custom-tabs.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+custom-tabs.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ Component } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ IonicPage, NavController, NavParams } from </span><span class="s2">'ionic-angular'</span><span class="s1">; 
+</span><span class="s3">/** 
+ * Generated class for the CustomTabsComponent component. 
+ * 
+ * See https://angular.io/api/core/Component for more info on Angular 
+ * Components. 
+ */</span><span class="s1"> 
+@Component({ 
+  selector: </span><span class="s2">'custom-tabs'</span><span class="s1">, 
+  templateUrl: </span><span class="s2">'custom-tabs.html'</span><span class="s1"> 
+}) 
+</span><span class="s0">export class </span><span class="s1">CustomTabsComponent { 
+  constructor(</span><span class="s0">public </span><span class="s1">navCtrl: NavController, </span><span class="s0">public </span><span class="s1">navParams: NavParams) { 
+ 
+  } 
+  goToGameStory() 
+  { 
+    </span><span class="s0">this</span><span class="s1">.navCtrl.push(</span><span class="s2">&quot;GameStoryPage&quot;</span><span class="s1">); 
+ 
+  } 
+  goToGameChat(){ 
+ 
+    </span><span class="s0">this</span><span class="s1">.navCtrl.push(</span><span class="s2">&quot;GameChatPage&quot;</span><span class="s1">); 
+  } 
+  goToGameInfo() 
+  { 
+  </span><span class="s0">this</span><span class="s1">.navCtrl.push(</span><span class="s2">&quot;GameInfoPage&quot;</span><span class="s1">); 
+  } 
+} 
+</span></pre>
+</body>
+</html>

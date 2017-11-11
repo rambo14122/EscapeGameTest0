@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>components.module.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+components.module.ts</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">import </span><span class="s1">{ NgModule } from </span><span class="s2">'@angular/core'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ GameItemComponent } from </span><span class="s2">'./game-item/game-item'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ GroupItemComponent } from </span><span class="s2">'./group-item/group-item'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{GroupItemComponentModule} from </span><span class="s2">&quot;./group-item/group-item.module&quot;</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ CustomStatusBarComponent } from </span><span class="s2">'./custom-status-bar/custom-status-bar'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{CustomStatusBarComponentModule} from </span><span class="s2">&quot;./custom-status-bar/custom-status-bar.module&quot;</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ CustomTabsComponent } from </span><span class="s2">'./custom-tabs/custom-tabs'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{CustomTabsComponentModule} from </span><span class="s2">&quot;./custom-tabs/custom-tabs.module&quot;</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{ LocationItemComponent } from </span><span class="s2">'./location-item/location-item'</span><span class="s1">; 
+</span><span class="s0">import </span><span class="s1">{LocationItemComponentModule} from </span><span class="s2">&quot;./location-item/location-item.module&quot;</span><span class="s1">; 
+@NgModule({ 
+    declarations: [GameItemComponent], 
+    imports: [GroupItemComponentModule,CustomStatusBarComponentModule,CustomTabsComponentModule,LocationItemComponentModule], 
+    exports: [GameItemComponent,GroupItemComponent, 
+    CustomStatusBarComponent, 
+    CustomTabsComponent, 
+    LocationItemComponent] 
+}) 
+</span><span class="s0">export class </span><span class="s1">ComponentsModule {} 
+</span></pre>
+</body>
+</html>

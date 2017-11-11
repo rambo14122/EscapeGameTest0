@@ -1,0 +1,30 @@
+<!--
+  Generated template for the GameSelectionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Game Selection</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <button (click)="gameSelected()"><game-item></game-item></button>
+  <div class="shownIfGameMaster">
+    <label class="gameItemLabel">Shown if game master:</label>
+    <button>Start</button> <button>End</button>
+  </div>
+
+
+  <div class="separator"></div>
+  <button><game-item></game-item></button>
+
+  <div class="shownIfGameMaster">
+    <label class="gameItemLabel">Shown if game master:</label>
+    <button>Start</button> <button>End</button>
+  </div>
+
+</ion-content>

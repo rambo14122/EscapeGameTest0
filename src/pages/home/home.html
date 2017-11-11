@@ -1,14 +1,51 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+      Authentication
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+  <ion-item>
+    <ion-label color="primary" floating>User Name</ion-label>
+    <ion-input clearInput></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Password</ion-label>
+    <ion-input clearInput></ion-input>
+  </ion-item>
+
+
+  <div class="separator"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block>Log In</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button block outline small (click)="registerNewUser()">Register</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block outline small>Forgot Password</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button block  color="secondary" (click)="visitorLogin()">Visitor log in</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!--<ion-item *ngFor="let item of items | async">-->
+  <!--{{item | json}}-->
+  <!--</ion-item>-->
 </ion-content>

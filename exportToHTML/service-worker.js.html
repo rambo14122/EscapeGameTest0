@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>service-worker.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); font-style: italic; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+service-worker.js</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">/** 
+ * Check out https://googlechromelabs.github.io/sw-toolbox/ for 
+ * more info on how to use sw-toolbox to custom configure your service worker. 
+ */</span><span class="s1"> 
+ 
+ 
+</span><span class="s2">'use strict'</span><span class="s1">; 
+importScripts(</span><span class="s2">'./build/sw-toolbox.js'</span><span class="s1">); 
+ 
+self.toolbox.options.cache = { 
+  name: </span><span class="s2">'ionic-cache'</span><span class="s1"> 
+}; 
+ 
+</span><span class="s0">// pre-cache our key assets</span><span class="s1"> 
+self.toolbox.precache( 
+  [ 
+    </span><span class="s2">'./build/main.js'</span><span class="s1">, 
+    </span><span class="s2">'./build/vendor.js'</span><span class="s1">, 
+    </span><span class="s2">'./build/main.css'</span><span class="s1">, 
+    </span><span class="s2">'./build/polyfills.js'</span><span class="s1">, 
+    </span><span class="s2">'index.html'</span><span class="s1">, 
+    </span><span class="s2">'manifest.json'</span><span class="s1"> 
+  ] 
+); 
+ 
+</span><span class="s0">// dynamically cache any other local assets</span><span class="s1"> 
+self.toolbox.router.any(</span><span class="s2">'/*'</span><span class="s1">, self.toolbox.fastest); 
+ 
+</span><span class="s0">// for any other requests go to the network, cache,</span><span class="s1"> 
+</span><span class="s0">// and then only use that cached resource if your user goes offline</span><span class="s1"> 
+self.toolbox.router.default = self.toolbox.networkFirst; 
+</span></pre>
+</body>
+</html>
